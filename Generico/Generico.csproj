@@ -8,11 +8,12 @@
     <ProjectGuid>{E745F5AA-1C75-4228-99B2-4173EFFBB24F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Generico</RootNamespace>
-    <AssemblyName>Generico</AssemblyName>
+    <RootNamespace>SACG</RootNamespace>
+    <AssemblyName>SACG</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -52,6 +52,9 @@
   <PropertyGroup>
     <ApplicationIcon>Company-Building.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Generico.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -69,6 +72,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="util\Config.cs" />
     <Compile Include="util\ConfigGenerico.cs" />
     <Compile Include="util\GeraDataMysql.cs" />
@@ -81,240 +89,222 @@
     <Compile Include="Modelo\Produto.cs" />
     <Compile Include="util\Validador.cs" />
     <Compile Include="util\Verificacoes.cs" />
-    <Compile Include="Visao\Construcao\FrmMovimentacaoProduto.cs">
+    <Compile Include="Visao\FrmMovimentacaoProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmMovimentacaoProduto.Designer.cs">
+    <Compile Include="Visao\FrmMovimentacaoProduto.Designer.cs">
       <DependentUpon>FrmMovimentacaoProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmContasReceberAtrazadas.cs">
+    <Compile Include="Visao\FrmContasReceberAtrazadas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmContasReceberAtrazadas.Designer.cs">
+    <Compile Include="Visao\FrmContasReceberAtrazadas.Designer.cs">
       <DependentUpon>FrmContasReceberAtrazadas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmContasPagarAtrazadas.cs">
+    <Compile Include="Visao\FrmContasPagarAtrazadas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmContasPagarAtrazadas.Designer.cs">
+    <Compile Include="Visao\FrmContasPagarAtrazadas.Designer.cs">
       <DependentUpon>FrmContasPagarAtrazadas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadProduto.cs">
+    <Compile Include="Visao\FrmCadProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadProduto.Designer.cs">
+    <Compile Include="Visao\FrmCadProduto.Designer.cs">
       <DependentUpon>FrmCadProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCalculoJuros.cs">
+    <Compile Include="Visao\FrmCalculoJuros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCalculoJuros.Designer.cs">
+    <Compile Include="Visao\FrmCalculoJuros.Designer.cs">
       <DependentUpon>FrmCalculoJuros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmConsultaProduto.cs">
+    <Compile Include="Visao\FrmConsultaProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmConsultaProduto.Designer.cs">
+    <Compile Include="Visao\FrmConsultaProduto.Designer.cs">
       <DependentUpon>FrmConsultaProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmEstoqueMinimo.cs">
+    <Compile Include="Visao\FrmEstoqueMinimo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmEstoqueMinimo.Designer.cs">
+    <Compile Include="Visao\FrmEstoqueMinimo.Designer.cs">
       <DependentUpon>FrmEstoqueMinimo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmPrincipal.cs">
+    <Compile Include="Visao\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmPrincipal.Designer.cs">
+    <Compile Include="Visao\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmSelecionaFornecedor.cs">
+    <Compile Include="Visao\FrmSelecionaFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmSelecionaFornecedor.Designer.cs">
+    <Compile Include="Visao\FrmSelecionaFornecedor.Designer.cs">
       <DependentUpon>FrmSelecionaFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadFornecedor.cs">
+    <Compile Include="Visao\FrmCadFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadFornecedor.Designer.cs">
+    <Compile Include="Visao\FrmCadFornecedor.Designer.cs">
       <DependentUpon>FrmCadFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmConsultaFornecedor.cs">
+    <Compile Include="Visao\FrmConsultaFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmConsultaFornecedor.Designer.cs">
+    <Compile Include="Visao\FrmConsultaFornecedor.Designer.cs">
       <DependentUpon>FrmConsultaFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmSelecionaCliente.cs">
+    <Compile Include="Visao\FrmSelecionaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmSelecionaCliente.Designer.cs">
+    <Compile Include="Visao\FrmSelecionaCliente.Designer.cs">
       <DependentUpon>FrmSelecionaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmOperacaoParcelaReceber.cs">
+    <Compile Include="Visao\FrmOperacaoParcelaReceber.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmOperacaoParcelaReceber.Designer.cs">
+    <Compile Include="Visao\FrmOperacaoParcelaReceber.Designer.cs">
       <DependentUpon>FrmOperacaoParcelaReceber.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmGerenciarContaReceber.cs">
+    <Compile Include="Visao\FrmGerenciarContaReceber.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmGerenciarContaReceber.Designer.cs">
+    <Compile Include="Visao\FrmGerenciarContaReceber.Designer.cs">
       <DependentUpon>FrmGerenciarContaReceber.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadParcelaReceber.cs">
+    <Compile Include="Visao\FrmCadParcelaReceber.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadParcelaReceber.Designer.cs">
+    <Compile Include="Visao\FrmCadParcelaReceber.Designer.cs">
       <DependentUpon>FrmCadParcelaReceber.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadContaReceber.cs">
+    <Compile Include="Visao\FrmCadContaReceber.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadContaReceber.Designer.cs">
+    <Compile Include="Visao\FrmCadContaReceber.Designer.cs">
       <DependentUpon>FrmCadContaReceber.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmContasReceber.cs">
+    <Compile Include="Visao\FrmContasReceber.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmContasReceber.Designer.cs">
+    <Compile Include="Visao\FrmContasReceber.Designer.cs">
       <DependentUpon>FrmContasReceber.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadClienteConstrucao.cs">
+    <Compile Include="Visao\FrmCadClienteConstrucao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadClienteConstrucao.Designer.cs">
+    <Compile Include="Visao\FrmCadClienteConstrucao.Designer.cs">
       <DependentUpon>FrmCadClienteConstrucao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadContaPagar.cs">
+    <Compile Include="Visao\FrmCadContaPagar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadContaPagar.Designer.cs">
+    <Compile Include="Visao\FrmCadContaPagar.Designer.cs">
       <DependentUpon>FrmCadContaPagar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadParcela.cs">
+    <Compile Include="Visao\FrmCadParcela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmCadParcela.Designer.cs">
+    <Compile Include="Visao\FrmCadParcela.Designer.cs">
       <DependentUpon>FrmCadParcela.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmConsultaClienteConstrucao.cs">
+    <Compile Include="Visao\FrmConsultaClienteConstrucao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmConsultaClienteConstrucao.Designer.cs">
+    <Compile Include="Visao\FrmConsultaClienteConstrucao.Designer.cs">
       <DependentUpon>FrmConsultaClienteConstrucao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmGerenciarContaPagar.cs">
+    <Compile Include="Visao\FrmGerenciarContaPagar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmGerenciarContaPagar.Designer.cs">
+    <Compile Include="Visao\FrmGerenciarContaPagar.Designer.cs">
       <DependentUpon>FrmGerenciarContaPagar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmOperacaoParcela.cs">
+    <Compile Include="Visao\FrmOperacaoParcela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmOperacaoParcela.Designer.cs">
+    <Compile Include="Visao\FrmOperacaoParcela.Designer.cs">
       <DependentUpon>FrmOperacaoParcela.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visao\Generico\FrmCadCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Visao\Generico\FrmCadCliente.Designer.cs">
-      <DependentUpon>FrmCadCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visao\Generico\FrmConsultaCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Visao\Generico\FrmConsultaCliente.Designer.cs">
-      <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\Endereco.cs" />
     <Compile Include="util\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Visao\Construcao\FrmContasPagar.cs">
+    <Compile Include="Visao\FrmContasPagar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visao\Construcao\FrmContasPagar.Designer.cs">
+    <Compile Include="Visao\FrmContasPagar.Designer.cs">
       <DependentUpon>FrmContasPagar.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Visao\Construcao\FrmMovimentacaoProduto.resx">
+    <EmbeddedResource Include="Visao\FrmMovimentacaoProduto.resx">
       <DependentUpon>FrmMovimentacaoProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmContasReceberAtrazadas.resx">
+    <EmbeddedResource Include="Visao\FrmContasReceberAtrazadas.resx">
       <DependentUpon>FrmContasReceberAtrazadas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmContasPagarAtrazadas.resx">
+    <EmbeddedResource Include="Visao\FrmContasPagarAtrazadas.resx">
       <DependentUpon>FrmContasPagarAtrazadas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmCadProduto.resx">
+    <EmbeddedResource Include="Visao\FrmCadProduto.resx">
       <DependentUpon>FrmCadProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmCalculoJuros.resx">
+    <EmbeddedResource Include="Visao\FrmCalculoJuros.resx">
       <DependentUpon>FrmCalculoJuros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmConsultaProduto.resx">
+    <EmbeddedResource Include="Visao\FrmConsultaProduto.resx">
       <DependentUpon>FrmConsultaProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmEstoqueMinimo.resx">
+    <EmbeddedResource Include="Visao\FrmEstoqueMinimo.resx">
       <DependentUpon>FrmEstoqueMinimo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmPrincipal.resx">
+    <EmbeddedResource Include="Visao\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmSelecionaFornecedor.resx">
+    <EmbeddedResource Include="Visao\FrmSelecionaFornecedor.resx">
       <DependentUpon>FrmSelecionaFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmCadFornecedor.resx">
+    <EmbeddedResource Include="Visao\FrmCadFornecedor.resx">
       <DependentUpon>FrmCadFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmConsultaFornecedor.resx">
+    <EmbeddedResource Include="Visao\FrmConsultaFornecedor.resx">
       <DependentUpon>FrmConsultaFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmSelecionaCliente.resx">
+    <EmbeddedResource Include="Visao\FrmSelecionaCliente.resx">
       <DependentUpon>FrmSelecionaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmOperacaoParcelaReceber.resx">
+    <EmbeddedResource Include="Visao\FrmOperacaoParcelaReceber.resx">
       <DependentUpon>FrmOperacaoParcelaReceber.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmGerenciarContaReceber.resx">
+    <EmbeddedResource Include="Visao\FrmGerenciarContaReceber.resx">
       <DependentUpon>FrmGerenciarContaReceber.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmCadParcelaReceber.resx">
+    <EmbeddedResource Include="Visao\FrmCadParcelaReceber.resx">
       <DependentUpon>FrmCadParcelaReceber.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmCadContaReceber.resx">
+    <EmbeddedResource Include="Visao\FrmCadContaReceber.resx">
       <DependentUpon>FrmCadContaReceber.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmContasReceber.resx">
+    <EmbeddedResource Include="Visao\FrmContasReceber.resx">
       <DependentUpon>FrmContasReceber.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmCadClienteConstrucao.resx">
+    <EmbeddedResource Include="Visao\FrmCadClienteConstrucao.resx">
       <DependentUpon>FrmCadClienteConstrucao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmCadContaPagar.resx">
+    <EmbeddedResource Include="Visao\FrmCadContaPagar.resx">
       <DependentUpon>FrmCadContaPagar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmCadParcela.resx">
+    <EmbeddedResource Include="Visao\FrmCadParcela.resx">
       <DependentUpon>FrmCadParcela.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmConsultaClienteConstrucao.resx">
+    <EmbeddedResource Include="Visao\FrmConsultaClienteConstrucao.resx">
       <DependentUpon>FrmConsultaClienteConstrucao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmGerenciarContaPagar.resx">
+    <EmbeddedResource Include="Visao\FrmGerenciarContaPagar.resx">
       <DependentUpon>FrmGerenciarContaPagar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Construcao\FrmOperacaoParcela.resx">
+    <EmbeddedResource Include="Visao\FrmOperacaoParcela.resx">
       <DependentUpon>FrmOperacaoParcela.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Generico\FrmCadCliente.resx">
-      <DependentUpon>FrmCadCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visao\Generico\FrmConsultaCliente.resx">
-      <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -326,7 +316,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Visao\Construcao\FrmContasPagar.resx">
+    <EmbeddedResource Include="Visao\FrmContasPagar.resx">
       <DependentUpon>FrmContasPagar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.Config" />
