@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E745F5AA-1C75-4228-99B2-4173EFFBB24F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Generico</RootNamespace>
+    <AssemblyName>Generico</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>Company-Building.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="util\Config.cs" />
+    <Compile Include="util\ConfigGenerico.cs" />
+    <Compile Include="util\GeraDataMysql.cs" />
+    <Compile Include="Modelo\ContaPagar.cs" />
+    <Compile Include="Modelo\ContaReceber.cs" />
+    <Compile Include="Modelo\ParcelaReceber.cs" />
+    <Compile Include="Modelo\Fornecedor.cs" />
+    <Compile Include="Modelo\ParcelaPagar.cs" />
+    <Compile Include="Modelo\Pessoa_Juridica.cs" />
+    <Compile Include="Modelo\Produto.cs" />
+    <Compile Include="util\Validador.cs" />
+    <Compile Include="util\Verificacoes.cs" />
+    <Compile Include="Visao\Construcao\FrmMovimentacaoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmMovimentacaoProduto.Designer.cs">
+      <DependentUpon>FrmMovimentacaoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmContasReceberAtrazadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmContasReceberAtrazadas.Designer.cs">
+      <DependentUpon>FrmContasReceberAtrazadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmContasPagarAtrazadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmContasPagarAtrazadas.Designer.cs">
+      <DependentUpon>FrmContasPagarAtrazadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadProduto.Designer.cs">
+      <DependentUpon>FrmCadProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCalculoJuros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCalculoJuros.Designer.cs">
+      <DependentUpon>FrmCalculoJuros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmConsultaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmConsultaProduto.Designer.cs">
+      <DependentUpon>FrmConsultaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmEstoqueMinimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmEstoqueMinimo.Designer.cs">
+      <DependentUpon>FrmEstoqueMinimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmSelecionaFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmSelecionaFornecedor.Designer.cs">
+      <DependentUpon>FrmSelecionaFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadFornecedor.Designer.cs">
+      <DependentUpon>FrmCadFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmConsultaFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmConsultaFornecedor.Designer.cs">
+      <DependentUpon>FrmConsultaFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmSelecionaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmSelecionaCliente.Designer.cs">
+      <DependentUpon>FrmSelecionaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmOperacaoParcelaReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmOperacaoParcelaReceber.Designer.cs">
+      <DependentUpon>FrmOperacaoParcelaReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmGerenciarContaReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmGerenciarContaReceber.Designer.cs">
+      <DependentUpon>FrmGerenciarContaReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadParcelaReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadParcelaReceber.Designer.cs">
+      <DependentUpon>FrmCadParcelaReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadContaReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadContaReceber.Designer.cs">
+      <DependentUpon>FrmCadContaReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmContasReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmContasReceber.Designer.cs">
+      <DependentUpon>FrmContasReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadClienteConstrucao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadClienteConstrucao.Designer.cs">
+      <DependentUpon>FrmCadClienteConstrucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadContaPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadContaPagar.Designer.cs">
+      <DependentUpon>FrmCadContaPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadParcela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmCadParcela.Designer.cs">
+      <DependentUpon>FrmCadParcela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmConsultaClienteConstrucao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmConsultaClienteConstrucao.Designer.cs">
+      <DependentUpon>FrmConsultaClienteConstrucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmGerenciarContaPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmGerenciarContaPagar.Designer.cs">
+      <DependentUpon>FrmGerenciarContaPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmOperacaoParcela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmOperacaoParcela.Designer.cs">
+      <DependentUpon>FrmOperacaoParcela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Generico\FrmCadCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Generico\FrmCadCliente.Designer.cs">
+      <DependentUpon>FrmCadCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Generico\FrmConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Generico\FrmConsultaCliente.Designer.cs">
+      <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Cliente.cs" />
+    <Compile Include="Modelo\Endereco.cs" />
+    <Compile Include="util\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Visao\Construcao\FrmContasPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Construcao\FrmContasPagar.Designer.cs">
+      <DependentUpon>FrmContasPagar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Visao\Construcao\FrmMovimentacaoProduto.resx">
+      <DependentUpon>FrmMovimentacaoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmContasReceberAtrazadas.resx">
+      <DependentUpon>FrmContasReceberAtrazadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmContasPagarAtrazadas.resx">
+      <DependentUpon>FrmContasPagarAtrazadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmCadProduto.resx">
+      <DependentUpon>FrmCadProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmCalculoJuros.resx">
+      <DependentUpon>FrmCalculoJuros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmConsultaProduto.resx">
+      <DependentUpon>FrmConsultaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmEstoqueMinimo.resx">
+      <DependentUpon>FrmEstoqueMinimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmSelecionaFornecedor.resx">
+      <DependentUpon>FrmSelecionaFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmCadFornecedor.resx">
+      <DependentUpon>FrmCadFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmConsultaFornecedor.resx">
+      <DependentUpon>FrmConsultaFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmSelecionaCliente.resx">
+      <DependentUpon>FrmSelecionaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmOperacaoParcelaReceber.resx">
+      <DependentUpon>FrmOperacaoParcelaReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmGerenciarContaReceber.resx">
+      <DependentUpon>FrmGerenciarContaReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmCadParcelaReceber.resx">
+      <DependentUpon>FrmCadParcelaReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmCadContaReceber.resx">
+      <DependentUpon>FrmCadContaReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmContasReceber.resx">
+      <DependentUpon>FrmContasReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmCadClienteConstrucao.resx">
+      <DependentUpon>FrmCadClienteConstrucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmCadContaPagar.resx">
+      <DependentUpon>FrmCadContaPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmCadParcela.resx">
+      <DependentUpon>FrmCadParcela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmConsultaClienteConstrucao.resx">
+      <DependentUpon>FrmConsultaClienteConstrucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmGerenciarContaPagar.resx">
+      <DependentUpon>FrmGerenciarContaPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Construcao\FrmOperacaoParcela.resx">
+      <DependentUpon>FrmOperacaoParcela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Generico\FrmCadCliente.resx">
+      <DependentUpon>FrmCadCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Generico\FrmConsultaCliente.resx">
+      <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Visao\Construcao\FrmContasPagar.resx">
+      <DependentUpon>FrmContasPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\1324559806_Cart.ico" />
+    <None Include="imagens\1324560795_Cart.ico" />
+    <Content Include="Company-Building.ico" />
+    <Content Include="imagens\Add Button-32.png" />
+    <Content Include="imagens\Button Close_32.png" />
+    <Content Include="imagens\Button Delete_32.png" />
+    <Content Include="imagens\button_blue_ffw-32.png" />
+    <Content Include="imagens\button_blue_first-32.png" />
+    <Content Include="imagens\button_blue_last-32.png" />
+    <Content Include="imagens\button_blue_rew-32.png" />
+    <Content Include="imagens\check_2.png" />
+    <None Include="imagens\Company-Building.ico" />
+    <Content Include="imagens\save_as.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
